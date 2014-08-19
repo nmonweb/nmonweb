@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+#
+# Este programa obtiene las estadísticas directamente de la HMC
+#
+# Usage: getInfoStatHMC <hmc-name> <username> <directorio_destino>
+#
+#
+if ($ARGV[0] eq "" || $ARGV[1] eq "" ) {
+    printf "\tlistallconfig <nombre del sistema> <usuario conexión>\n";
+    exit(0);
+}
+else {
+	$hmc=$ARGV[0];
+	$user=$ARGV[1];
+}
+
+if ($ARGV[2] eq "" ) {
+    $dir_datos=".";
+}
+else {
+    $dir_datos=$ARGV[2];
+}
+   
+# Recupera el nombre del sistema
+@sys=`ssh -p 22 $user\@$hmc lssyscfg -r sys -F name:serial_num:type_model:state`;
+
+# Por cada sistema que gestione, se tomará ....
+foreach (@sys) {
+    chomp;
+    ($sys, $serial_num, $model, $state) = (split /:/);
+
+    # Tomamos el tamaño de memoria total de la máquina y el número de procesadores
+    open(STATS, ">${dir_datos}/${sys}_month_stats.txt");
+    @datos =`ssh -p 22 $user\@$hmc lslparutil -m $sys -r all -d 30 -s h`;
+    print STATS @datos;
+    close(STATS);
+}
+
+exit 0;
