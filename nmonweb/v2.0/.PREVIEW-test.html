@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="keywords" content="NMONWEB" />
+        <meta name="description" content="Rendimiento VM AIX" />
+        <meta name="author" content="David López San Juan" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<title>NMONWEB</title>
+        <!-- Start of StyleSheet Definitions -->
+        <link rel="stylesheet" type="text/css" href="css/test.css" />
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+        <!-- End of StyleSheet Definitions -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" ></script>
+	<script type="text/javascript" src="comun/language/jquery-ui-i18n.js" ></script>
+	<script type="text/javascript" src="comun/language/i18next-1.7.3.min" ></script>
+        <script type="text/javascript" src="js/nmonweb.js" ></script>
+        <script type="text/javascript" src="js/dialog.js" ></script>
+    </head>
+    
+    <body style="" >
+        <div class="mainbox" >
+            <div class="header" >
+                <h1 data-i18n="header.title" ></h1>
+                <h2 data-i18n="header.subtitle" ></h2>
+            </div>
+            <div class="menu_main" >
+                <form>
+                    <div id="radio" >
+                        <input type="radio" id="nmonweb" name="opt_menu_main" checked="checked" />
+                            <label for="nmonweb" ><span data-i18n="main_menu.aix" ></span></label>
+                        <input type="radio" id="hmcweb" name="opt_menu_main" />
+                            <label for="hmcweb" ><span data-i18n="main_menu.hmc" ></span></label>
+                        <input type="radio" id="compare_dates" name="opt_menu_main" />
+                            <label for="compare_dates" ><span data-i18n="main_menu.compare" ></span></label>
+                        <input type="radio" id="group" name="opt_menu_main" />
+                            <label for="group" ><span data-i18n="main_menu.group" ></span></label>
+                    </div>
+                </form>
+            </div>
+        </div>    
+        <div class="menu_left" >
+            <ol id="selectable" >
+            <li class="ui-widget-content" >Item 1</li>
+            <li class="ui-widget-content" >Item 2</li>
+            <li class="ui-widget-content" >Item 3</li>
+            <li class="ui-widget-content" >Item 4</li>
+            <li class="ui-widget-content" >Item 5</li>
+            <li class="ui-widget-content" >Item 6</li>
+            <li class="ui-widget-content" >Item 7</li>
+            </ol>
+        </div>
+
+        <div class="bodyarea" ></div>
+    
+
+    <div id="dialog-vm" >
+        <b><p class="validateTips" data-i18n="dialog_vm.subtitle" ></p></b>
+        <form>
+                <label for="listEnv" data-i18n="dialog_vm.environment" ></label>
+                <select id="listEnv" ></select>
+                <label for="listVM" data-i18n="dialog_vm.select" ></label>
+                <select id="listVM" ></select>
+                <label for="fromdate" data-i18n="dialog_vm.from" ></label>
+                <input type="text" id="fromdate" name="fromdate" />
+                <label for="todate" data-i18n="dialog_vm.to" ></label>
+                <input type="text" id="todate" name="todate" />
+        </form>
+    </div>
+</body></html>

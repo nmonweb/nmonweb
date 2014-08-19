@@ -1,0 +1,475 @@
+{
+  "header": {
+    "title": "Graphics utilization data",
+    "subtitle": "Performance data of AIX or Linux machines"
+  },
+  "main_menu": {
+    "aix": "VM AIX/Linux",
+    "hmc": "Managed Systems for HMC/IVM",
+    "compare": "Compare dates",
+    "group": "Compare Groups of VM"
+  },
+  "menu_vm": {
+    "tab1": "CPU",
+    "tab2": "CPU stats",
+    "tab3": "Memory",
+    "tab4": "Process",
+    "tab5": "Page",
+    "tab6": "File",
+    "tab7": "I/O Adapters",
+    "tab8": "Network",
+    "tab9": "WLM",
+    "tab10": "Anual"
+  },
+  "menu_compare": {
+    "tab1": "CPU",
+    "tab2": "Memory",
+    "tab3": "Page"
+  },
+  "menu_hmc": {
+    "tab1": "CPU",
+    "desc_tab1": "Graphics for CPU VM AIX"
+  },
+  "toolbar_vm": {
+    "options": "Change options",
+    "prev_week": "Previous Week",
+    "prev_day": "Previous Day",
+    "next_day": "Next Day",
+    "next_week": "Next Week"
+  },  
+  "bodyarea": {
+    "help": "Help",
+    "tab1": "CPU",
+    "tab2": "CPU stats",
+    "tab3": "Memory",
+    "tab4": "Process",
+    "tab5": "Page",
+    "tab6": "File",
+    "tab7": "I/O Adapters",
+    "tab8": "Network",
+    "tab9": "WLM",
+    "tab10": "Anual",
+    "host_notassigned": "Default"
+  },
+  "dialog_vm": {
+    "title": "Select data for graphics",
+    "subtitle": "All form fields are required",
+    "environment": "Environment",
+    "select": "Select machine",
+    "from": "From",
+    "to": "To",
+    "button": "Generate Graph"
+  },
+  
+  "dialog_compare": {
+    "title": "Select to days for compare",
+    "first_day": "First Day",
+    "second_day": "Second Day"
+  },
+  "dialog_hmc": {
+    "title": "Select a System Managened",
+    "listSystems": "System Managened",
+    "first_day": "First Day",
+    "second_day": "Second Day"
+  },
+  "message": {
+    "nmon": {
+      "missing": "Your must select a VM AIX/Linux from the list",
+      "nodate": "You must select a period of time",
+      "title": "Select a VM AIX or Linux Machine",
+      "select": "(Select VM AIX/Linux)"
+    },
+    "nmon_physical": {
+      "missing": "Your must select a Physical Machine from the list",
+      "select": "(Select a Physical Machine)",
+      "title": "Select a Physical machine",
+      "all_systems": "All systems",
+      "menu_title": "Managed Systems",
+      "confirm": "The query may take a long time. Are you sure?"
+    },
+    "hmc": {
+      "missing": "Your must select a Managed System from the list",
+      "select": "(Select a Managed System)",
+      "title": "Data collected from HMC/IVM"
+    }
+  },
+  "help": {
+    "title": "Help",
+    "noyet": "Help no available yet",
+    "text": {
+      "cpu_4": [
+        "<p><b>Estad&iacute;sticas de Kernel (Procesos)</b></p> ",
+        "<p><i>Kernel Internals 1</i></p>",
+        "<p>- <b>RunQueue</b> - Media del n&uacute;mero de Threads que est&aacute;n listos pero que est&aacute;n a la espera de un Procesador disponible.</p>",
+        "<p>- <b>Swap-In</b> &ndash; N&uacute;mero de procesos en la cola de intercambio (swap queueu) por segundo durante el intervalo de la muestra.</p>",
+        "<p><i>Kernel Internals 2</i></p>",
+        "<p>- <b>Proc. Switches</b> - N&uacute;mero de procesos intercambiados por segundo en el intervalo de la muestra.</p>",
+        "<p>- <b>Sys. Calls</b> &ndash; N&uacute;mero de llamadas al sistema por segundo en el intervalo de la muestra.</p>",
+        "<p><i>Kernel Internal 3</i></p>",
+        "<p>- <b>Read System Call</b> - N&uacute;mero de llamadas para lecturas por segundo en el intervalo de la muestra.</p>",
+        "<p>- <b>Write System Call</b> - N&uacute;mero de llamadas para escrituras por segundo en el intervalo de la muestra.</p>",
+        "<p><i>Kernel Internal 4</i></p>",
+        "<p>- <b>Forks</b> - N&uacute;mero de forks (creaci&oacute;n de un proceso con las mismas caracter&iacute;sticas que el proceso desde el que se crea) por segundo en el intervalo de la muestra.</p>",
+        "<p>- <b>Exec</b> - N&uacute;mero de exec (creaci&oacute;n de un nuevo programa) por segundo en el intervalo de la muestra.</p>"
+      ]
+    }
+  },
+  "graph": {
+    "config": {
+      "loading": "Loading...",
+      "months": "January,February,March,April,May,June,July,August,September,October,November,December",
+      "shortMonths": "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec",
+      "weekdays": "Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday",
+      "decimalPoint": ".",
+      "numericSymbols": "k,M,G,T,P,E",
+      "resetZoom": "Reset zoom",
+      "resetZoomTitle": "Reset zoom level 1:1",
+      "thousandsSep": ","
+    },
+    "common" : {
+        "max": "Maximum",
+        "avg": "Average",
+        "min": "Minimum",
+        "entitled": "Entitled",
+        "processors": "Processors",
+        "assigned": "Assigned",
+        "installed": "Instaled",
+        "cpu%": "CPU %",
+        "memory": "Memory (GB)",
+        "memory_mb": "Memory (MB)",
+        "memory%": "Memory %",
+        "numpages": "Num. Pages",
+        "kb_s": "Kb/sec.",
+        "total": "Total",
+        "less_10": "Lower than 10%",
+        "between_10_20": "Between 10% to 20%",
+        "between_20_30": "Between 20% to 30%",
+        "between_30_40": "Between 30% to 40%",
+        "between_40_50": "Between 40% to 50%",
+        "between_50_70": "Between 50% to 60%",
+        "between_60_70": "Between 60% to 70%",
+        "between_70_80": "Between 70% to 80%",
+        "between_80_90": "Between 80% to 90%",
+        "between_90_95": "Between 90% to 95%",
+        "higher_95": "Higher than 95%"
+    },
+    "cpu_1": {
+      "title": "Physical CPU vs Entitled",
+      "serie_sample_1": "Physical CPU",
+      "serie_sample_2": "Entitled",
+      "serie_sample_3": "Pool",
+      "serie_avg_1": "Avg. Physical CPU",
+      "serie_avg_2": "Max. Physical CPU",
+      "serie_avg_3": "Entitled",
+      "serie_avg_4": "Pool"
+    },
+    "cpu_2": {
+      "title": "CPU% vs VPs",
+      "serie_1": "Process",
+      "serie_2": "System",
+      "serie_3": "Wait",
+      "serie_4": "Max. Proc+Sys+Wait"
+    },
+    "cpu_10": {
+      "title": "CPU Total",
+      "serie_1": "Process",
+      "serie_2": "System",
+      "serie_3": "Wait",
+      "serie_4": "Max. Proc+Sys+Wait"
+    },
+    "cpu_3": {
+      "title": "Shared Pool Utilisation",
+      "serie_1": "Pool Idle",
+      "serie_2": "Others VMs",
+      "serie_3": "Physical CPU"
+    },
+    "cpu_5": {
+      "title": "CPU by Thread"
+    },
+    "cpu_12": {
+      "title": "CPU by Thread 2"
+    },
+    "cpu_4": {
+      "title": "CPU Utilisation for hours"
+    },
+    "cpu_6": {
+      "title": "CPU Utilisation"
+    },
+    "cpu_7": {
+      "title": "CPU Utilisation - Online"
+    },
+    "cpu_8": {
+      "title": "CPU Utilisation - Batch"
+    },
+    "cpu_9": {
+      "title": "CPU Utilisation for weekdays",
+      "axis": "Processors"
+    },
+    "mem_1": {
+        "title": "Memory without FS Cache",
+        "serie_1": "Process",
+        "serie_2": "System",
+        "serie_3": "Physical Memory"
+    },
+    "mem_2": {
+        "title": "Memory Used",
+        "serie_1": "Used",
+        "serie_2": "Total"
+    },
+    "mem_3": {
+        "title": "Memory Utilisation",
+        "serie_1": "FS Cache",
+        "serie_2": "Process",
+        "serie_3": "System",
+        "serie_4": "Min. Perm",
+        "serie_5": "Max. Perm"
+    },
+    "mem_4": {
+        "title": "Virtual Memory",
+        "serie_1": "Free",
+        "serie_2": "Used",
+        "serie_3": "Min. Free"
+    },
+    "mem_5": {
+        "title": "Memory Free",
+        "serie_1": "Real Free"
+    },
+    "mem_6": {
+        "title": "VMTune Parameters",
+        "serie_1": "% Num. Perm",
+        "serie_2": "% Min. Perm",
+        "serie_3": "% Max. Perm",
+        "serie_4": "% Comp."
+    },
+    "proc_1": {
+        "title": "Process 1",
+        "axis": "Proc./sec.",
+        "serie_1": "RunQueue",
+        "serie_2": "Swap-in",
+        "serie_3": "Max. RunQueue",
+        "serie_4": "Max Swap-in."
+    },
+    "proc_2": {
+        "title": "Process 2",
+        "axis": "Oper./sec.",
+        "serie_1": "Proc. Switches",
+        "serie_2": "Sys. Calls",
+        "serie_3": "Max. Proc. Switches",
+        "serie_4": "Max. Sys. Calls"
+    },
+    "proc_3": {
+        "title": "Process 3",
+        "axis": "Proc./sec.",
+        "serie_1": "Read System Call",
+        "serie_2": "Write System Call",
+        "serie_3": "Max. Read",
+        "serie_4": "Max. Write"
+    },
+    "proc_4": {
+        "title": "Process 4",
+        "axis": "Oper./sec.",
+        "serie_1": "Fork",
+        "serie_2": "Exec",
+        "serie_3": "Max. Fork",
+        "serie_4": "Max Exec"
+    },
+    "page_1": {
+        "title": "Pagging 1",
+        "serie_1": "Pages Fault",
+        "serie_2": "Min. Pages Fault",
+        "serie_3": "Max. Pages Fault"
+    },
+    "page_2": {
+        "title": "Page in/out (include filesystem)",
+        "serie_1": "Pages paged In",
+        "serie_2": "Pages paged Out",
+        "serie_3": "Max. Pages paged In",
+        "serie_4": "Max. Pages paged Out"
+    },
+    "page_3": {
+        "title": "Page in/out (paging space)",
+        "serie_1": "pgsIn",
+        "serie_2": "pgsOut",
+        "serie_3": "Max. pgsIn",
+        "serie_4": "Max. pgsOut"
+    },
+    "page_4": {
+        "title": "Pagging 4",
+        "serie_1": "Page Reclaims",
+        "serie_2": "Paging Scans",
+        "serie_3": "Max. Page Reclaims",
+        "serie_4": "Max. Paging Scans"
+    },
+    "page_5": {
+        "title": "Page in/out (filesystem)",
+        "serie_1": "pgsIn",
+        "serie_2": "pgsOut",
+        "serie_3": "Max. pgsIn",
+        "serie_4": "Max. pgsOut"
+    },
+    "fc_1": {
+        "title": "I/O Adapter - Read"
+    },
+    "fc_2": {
+        "title": "I/O Adapter - Write"
+    },
+    "fc_3": {
+        "title": "I/O Adapter - Number of transfers per second"
+    },
+    "fc_4": {
+        "title": "I/O Adapter - Read (Max/Avg/Min)"
+    },
+    "fc_5": {
+        "title": "I/O Adapter - Write (Max/Avg/Min)"
+    },
+    "net_1": {
+        "title": "Network - Read"
+    },
+    "net_2": {
+        "title": "Network - Write"
+    },
+    "net_3": {
+        "title": "Network - Packet Read"
+    },
+    "net_4": {
+        "title": "Network - Packet Write"
+    },
+    "net_5": {
+        "title": "Network",
+        "serie_1": "Read",
+        "serie_2": "Write"
+    },
+    "net_6": {
+        "title": "Num. Packets",
+        "axis": "Num. Packets",
+        "serie_1": "Read",
+        "serie_2": "Write"
+    },
+    "net_7": {
+        "title": "Network Errors",
+        "axis": "Num. Packets",
+        "serie_1": "Input Errors",
+        "serie_2": "Output Errors",
+        "serie_3": "Collisions"
+    },
+    "wlm_1": {
+        "title": "WLM - CPU"
+    },
+    "wlm_2": {
+        "title": "WLM - Memory"
+    },
+    "wlm_3": {
+        "title": "WLM - Blocks I/O"
+    },
+    "file_1": {
+        "title": "Kernel Read/Write System Calls",
+        "axis": "Oper./sec.",
+        "serie_1": "Readch",
+        "serie_2": "Writech",
+        "serie_3": "Max. Readch",
+        "serie_4": "Max. Writech"
+    },
+    "file_2": {
+        "title": "Kernel Filesystem Functions",
+        "axis": "Oper./sec.",
+        "serie_1": "iget",
+        "serie_2": "dirblk",
+        "serie_3": "namei",
+        "serie_4": "Max. iget",
+        "serie_5": "Max. dirblk",
+        "serie_6": "Max. namei"
+    },
+    "tend_1": {
+        "title": "Anual"
+    },
+    "cpu_all": {
+        "title": "CPU Utilisation"
+    },
+    "hmc_1": {
+        "title": "Processor Usage",
+        "serie_1": "Config",
+        "serie_2": "Used",
+        "serie_avg_2": "Max. Used",
+        "serie_avg_3": "Min. Used"
+    },
+    "hmc_2": {
+        "title": "CPU Pool Utilisation"
+    },
+    "hmc_3": {
+        "title": "LPARs aggregated"
+    },
+    "hmc_4": {
+        "title": "CPU Utilisation"
+    },
+    "hmc_5": {
+      "title": "CPU Utilisation for hours",
+      "serie_4": "Asigned",
+      "serie_5": "Installed"
+    },
+    "hmc_6": {
+      "title": "CPU Utilisation - Online"
+    },
+    "hmc_7": {
+      "title": "CPU Utilisation - Batch"
+    },
+    "hmc_8": {
+      "title": "CPU Utilisation - Batch"
+    },
+    "hmc_9": {
+      "title": "CPU Utilisation - MAX/MIN/AVG"
+    },
+    "hmc_avg_all": {
+        "title": "Avg. CPU Usage for all Machines"
+    },
+    "hmc_max_all": {
+        "title": "Max. CPU Usage for all Machines"
+    },
+    "compare": {
+      "CPU1": {
+        "title": "Comparation Physical CPU vs Entitled"
+      },
+      "CPU2": {
+        "title" : "Comparation % User vs Total",
+        "series" : "% User"
+      },
+      "CPU3": {
+        "title" : "Comparation % Sys vs Total",
+        "series" : "% Sys"
+      },
+      "CPU4": {
+        "title" : "Comparation % Wait vs Total",
+        "series" : "% Wait"
+      },
+      "MEM": {
+          "title": "Comparation Memory Used (without FS Cache)"
+      },
+      "MEM2": {
+          "title": "Comparation Memory Free "
+      },
+      "MEM3": {
+          "title": "Comparation Virtual Memory Free"
+      },
+      "MEM4": {
+          "title": "Comparation Num. Perm."
+      },
+      "PAGE1": {
+          "title": "Comparation Pages Fault"
+      },
+      "PAGE2": {
+          "title": "Comparation Pages In/Out",
+          "serie_1": "Pages In",
+          "serie_2": "Pages Out"
+      },
+      "PAGE3": {
+          "title": "Comparation Pages In/Out (paging space)",
+          "serie_1": "Pages In",
+          "serie_2": "Pages Out"
+      },
+      "PAGE4": {
+          "title": "Comparation Paging Reclaims / Scans",
+          "serie_1": "Pages Reclaims",
+          "serie_2": "Pages Scans"
+      }
+    }
+  }
+}

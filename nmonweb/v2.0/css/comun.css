@@ -1,0 +1,34 @@
+#feedback {
+    font-size: 12px;
+}
+#selectable .ui-selecting {
+    /*background: #FECA40;*/
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(100, 100, 100, 0.85098)), to(rgb(255, 255, 255)));
+	background-repeat-x:no-repeat;
+	background-repeat-y:no-repeat;
+	background-repeat:no-repeat;
+	background-attachment:initial;
+	background-position:initial initial;
+	background-position-x:initial;
+	background-position-y:initial;
+	background-origin:initial;
+	background-clip:initial;
+	background-size:initial;
+}
+#selectable .ui-selected {
+    background: #F39814;
+    color: white;
+}
+#selectable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+#selectable li {
+    margin: 3px;
+    padding: 1px;
+    float: left;
+    width: auto;
+    font-size: 12px;
+}
